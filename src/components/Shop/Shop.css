@@ -7,3 +7,8 @@
     background-color: aquamarine;
     margin-left: 20px;
 }
+
+.cart{
+    position: sticky;
+    top: 0;
+}

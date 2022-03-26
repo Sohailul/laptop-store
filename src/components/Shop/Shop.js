@@ -28,11 +28,13 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-            <div className="cart-container mt-5">
-            <h3 className='pt-3'>Cart Summery</h3>
+            <div className="cart-container mt-5 cart">
+            <h4 className='pt-3 pb-3'>Cart Summery</h4>
                 {
                 cart.map(item => <Cart item={item}></Cart>)
                 }
+
+                <button className='btn btn-lg btn-primary mt-5' onClick={() => setCart([])}>Reset</button>
             </div>
         </div>
     );
