@@ -2,7 +2,7 @@ import React from 'react';
 
 const Theory = () => {
     return (
-        <div className='container mt-5 bg-secondary text-white p-3'>
+        <div className='container mt-5 p-3'>
             <h3>How react Works?</h3>
             <p>Answer: ReactJS is simply a JavaScript library for building user interfaces. 
                 It was created by Facebook and now has a large community, including FB, that actively maintains it. While building client-side apps, a team of Facebook developers realized that the DOM is slow 

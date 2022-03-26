@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.cart-data img{
+    border-radius: 50px;
+}
+
 .cart-data p{
     font-weight: bold;
 }

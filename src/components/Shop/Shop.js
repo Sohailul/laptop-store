@@ -18,8 +18,8 @@ const Shop = () => {
         setCart(newCart);
     };
     return (
-        <div className='container shop-container'>
-            <div className="products-container row">
+        <div className='shop-container'>
+            <div className=" container products-container row">
                 {
                     products.map(product => <Product
                         key={product.id}
@@ -29,12 +29,13 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container mt-5 p-3">
-            <h4 className='pt-3 pb-3'>Cart Summery</h4>
+                <h5 className='pt-3 pb-3 text-center'>Cart Summery</h5>
                 {
-                cart.map(item => <Cart item={item}></Cart>)
+                    cart.map(item => <Cart item={item}></Cart>)
                 }
 
-                <button className='btn btn-lg btn-primary mt-5' onClick={() => setCart([])}>Reset</button>
+                <button className='btn btn-lg btn-primary mt-5' onClick={() => setCart([cart[Math.floor(Math.random()*cart.length)]])}>Choose One Item</button>
+                <button className='btn btn-lg btn-primary mt-2' onClick={() => setCart([])}>Reset</button>
             </div>
         </div>
     );

@@ -10,8 +10,8 @@ const Product = ({ product, handleAddToCart }) => {
                     <img src={img} alt="" width="300"/>
                 </div>
                 <div className='card-body'>
-                    <h3 className='card-title'>{name}</h3>
-                    <p>Price: ${price}</p>
+                    <h4 className='card-title'>{name}</h4>
+                    <h6 className='mb-4'>Price: ${price}</h6>
                     <button onClick={() => handleAddToCart(product)} className='text-white btn btn-primary'>Add to cart <BsFillCartPlusFill /></button>
                 </div>
             </div>
