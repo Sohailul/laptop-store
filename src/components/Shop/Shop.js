@@ -15,7 +15,14 @@ const Shop = () => {
 
     const handleAddToCart = (laptop) => {
         const newCart = [...cart, laptop];
-        setCart(newCart);
+
+        if(cart.length < 4){
+            setCart(newCart);
+        }
+        else{
+            alert("Don't Add more than 4 items");
+        }
+        
     };
     return (
         <div className='shop-container'>
@@ -31,7 +38,7 @@ const Shop = () => {
             <div className="cart-container mt-5 p-3">
                 <h5 className='pt-3 pb-3 text-center'>Cart Summery</h5>
                 {
-                    cart.map(item => <Cart item={item}></Cart>)
+                    cart.map(item => <Cart key={item.id} item={item}></Cart>)
                 }
 
                 <button className='btn btn-lg btn-primary mt-5' onClick={() => setCart([cart[Math.floor(Math.random()*cart.length)]])}>Choose One Item</button>
