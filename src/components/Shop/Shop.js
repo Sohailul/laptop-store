@@ -41,7 +41,7 @@ const Shop = () => {
                     cart.map(item => <Cart key={item.id} item={item}></Cart>)
                 }
 
-                <button className='btn btn-lg btn-primary mt-5' onClick={() => setCart([cart[Math.floor(Math.random()*cart.length)]])}>Choose One Item</button>
+                <button className='btn btn-lg btn-primary mt-5' onClick={() => setCart([products[Math.floor(Math.random()*products.length)]])}>Choose One Item</button>
                 <button className='btn btn-lg btn-primary mt-2' onClick={() => setCart([])}>Reset</button>
             </div>
         </div>
